@@ -4,12 +4,19 @@ import subprocess, threading, signal, json, os, shlex, Queue
 
 from tingbot.platform_specific.tingbot import register_button_callback
 
-button_states = ['up', 'up', 'up', 'up']
+# button_states = ['up', 'up', 'up', 'up'] //tingbot origin
+button_states = ['up', 'up', 'up']
 actions = {}
 queue = Queue.Queue()
+# default_config = [ //tingbot origin
+#     {
+#         'combo': ['up', 'down', 'down', 'up'],
+#         'command': 'tbopen /apps/home',
+#     }
+# ]
 default_config = [
     {
-        'combo': ['up', 'down', 'down', 'up'],
+        'combo': ['up', 'down', 'up'],
         'command': 'tbopen /apps/home',
     }
 ]
